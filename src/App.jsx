@@ -263,6 +263,95 @@ useEffect(() => {
             </button>
           </div>
         )}
+
+        {/* Footer */}
+        <footer className="mt-12 border-t border-slate-800/60 pt-8 pb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <span className="text-sky-400 text-lg">⚡</span>
+                <h4 className="font-bold text-slate-200">Diagnostic Engine</h4>
+              </div>
+              <p className="text-xs text-slate-400 leading-relaxed">
+                An open-source hardware utility to check, verify, and validate components on second-hand laptops. Avoid buying tampered, repaired, or malfunctioning hardware.
+              </p>
+              <div className="flex items-center text-xs text-emerald-400 bg-emerald-950/30 border border-emerald-500/20 px-3 py-1.5 rounded-lg w-fit">
+                <span className="relative flex h-2 w-2 mr-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Web API Sync: Active
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <h4 className="font-semibold text-slate-200 text-sm">💡 Buying Checklist</h4>
+              <ul className="text-xs text-slate-400 space-y-2">
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400">▪</span>
+                  <span>Check hinges for wobble or cracking under stress.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400">▪</span>
+                  <span>Verify that all USB and charging ports connect reliably.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400">▪</span>
+                  <span>Test webcam, speaker volume, and headphone jack.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-sky-400">▪</span>
+                  <span>Compare WMI serial number with physical sticker on bottom cover.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-3">
+              <h4 className="font-semibold text-slate-200 text-sm">🔗 Resources & Docs</h4>
+              <div className="flex flex-col space-y-2 text-xs">
+                <a
+                  href="https://github.com/sarafatalamirfan/laptop-analyzer"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-400 hover:text-sky-400 transition-colors flex items-center gap-1.5"
+                >
+                  📦 GitHub Repository
+                </a>
+                <a
+                  href="#docs"
+                  className="text-slate-400 hover:text-sky-400 transition-colors flex items-center gap-1.5"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert("Documentation coming soon! Check the WMI console sync commands for advanced features.");
+                  }}
+                >
+                  📖 How to Inspect a Laptop
+                </a>
+                <a
+                  href="#privacy"
+                  className="text-slate-400 hover:text-sky-400 transition-colors flex items-center gap-1.5"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert("Privacy Guard: All scanned system stats are stored purely in-memory in your local browser and are never transmitted to any remote servers.");
+                  }}
+                >
+                  🛡️ Privacy & Local Security
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-slate-800/40 pt-4 flex flex-col md:flex-row justify-between items-center gap-3 text-[11px] text-slate-500">
+            <p>
+              © {new Date().getFullYear()} Laptop Diagnostic Engine. Developed to promote fair second-hand hardware sales.
+            </p>
+            <div className="flex gap-4 font-mono">
+              <span className="hover:text-slate-400 transition-colors cursor-pointer">v1.0.0</span>
+              <span>•</span>
+              <span className="hover:text-slate-400 transition-colors cursor-pointer">MIT License</span>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
